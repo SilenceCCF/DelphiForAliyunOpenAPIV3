@@ -44,7 +44,8 @@ procedure TForm1.ProcessResponse(Response: TAliyunAPIResponse; RequestInfo: stri
 begin
   //处理请求返回消息
   // 显示请求详情（可选，用于调试）
-  Memo1.Lines.Add(RequestInfo);   // 判断成功或失败
+  Memo1.Lines.Add(RequestInfo);  
+  // 判断成功或失败
   if Response.Success then
   begin
     Memo1.Lines.Add('API调用成功！');
@@ -63,6 +64,7 @@ begin
 end;
 
 procedure TForm1.ButtonGetClick(Sender: TObject);
+// GET 请求（参数 "in": "query"）
 var
   Response: TAliyunAPIResponse;
   APIClient: TAliyunAPIClient;
@@ -86,7 +88,7 @@ begin
 end;
 
 procedure TForm1.ButtonBodyWithJsonClick(Sender: TObject);
-// 2. POST 请求 - Body 为 JSON（参数 "in": "body"）
+// POST 请求 - Body 为 JSON（参数 "in": "body"）
 // 适用于创建、修改等操作，参数结构复杂，通过JSON传递。
 var
   APIClient: TAliyunAPIClient;
@@ -181,6 +183,8 @@ begin
   // 对应的 x-acs-content-sha256 为固定值：
   // e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
   // ContentType 也可以不填。
+  // 注：也可以通过 Body 为 FormData（参数 "in": "formData"）的方式实现。
+  
   // 创建API客户端
   APIClient := TAliyunAPIClient.Create(AccessKeyId, AccessKeySecret);
   Memo1.Clear;

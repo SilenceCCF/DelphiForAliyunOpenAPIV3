@@ -10,3 +10,6 @@ Delphi For Aliyun OpenAPI V3
 - /demo                     示例
 
 备注：使用示例时须将 AliyunAPIClient.pas 复制到同一文件夹或添加到搜索路径。
+
+作者：Silence
+主页：https://www.mympc.org

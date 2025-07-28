@@ -6,7 +6,7 @@ Delphi For Aliyun OpenAPI V3
 虽然现在 Delphi 没多少人用了，但仍是个很好用的工具。本单元在 Delphi 10.4.2 下开发，不依赖第三方库。用法比较简单，示例里都有。
 
 目录说明：
-/src/AliyunAPIClient.pas  本单元
-/demo                     示例
+- /src/AliyunAPIClient.pas  本单元
+- /demo                     示例
 
 备注：使用示例时须将 AliyunAPIClient.pas 复制到同一文件夹或添加到搜索路径。
